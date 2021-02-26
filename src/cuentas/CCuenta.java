@@ -1,59 +1,63 @@
 package cuentas;
-
+/**
+ * Esta clase es la que almacena los datos de la cuenta bancaria
+ * en cuestión.
+ * @author Fer
+ */
 
 public class CCuenta {
 
     /**
-     * @return the nombre
+     * @return El nombre
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * @param nombre método setter de nombre
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * @return the cuenta
+     * @return  cuenta
      */
     public String getCuenta() {
         return cuenta;
     }
 
     /**
-     * @param cuenta the cuenta to set
+     * @param cuenta método setter de cuenta.
      */
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 
     /**
-     * @return the saldo
+     * @return  saldo
      */
     public double getSaldo() {
         return saldo;
     }
 
     /**
-     * @param saldo the saldo to set
+     * @param saldo método setter de saldo.
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
     /**
-     * @return the tipoInterés
+     * @return  tipoInterés
      */
     public double getTipoInterés() {
         return tipoInterés;
     }
 
     /**
-     * @param tipoInterés the tipoInterés to set
+     * @param tipoInterés método setter de tipoInterés.
      */
     public void setTipoInterés(double tipoInterés) {
         this.tipoInterés = tipoInterés;
@@ -69,6 +73,13 @@ public class CCuenta {
     {
     }
 
+    /**
+     * Método constructor
+     * @param nom
+     * @param cue
+     * @param sal
+     * @param tipo 
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -80,6 +91,12 @@ public class CCuenta {
     {
         return getSaldo();
     }
+    
+    /**
+     * Método para ingresar .
+     * @param cantidad
+     * @throws Exception 
+     */
 
     public void ingresar(double cantidad) throws Exception
     {
@@ -88,6 +105,11 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * Método para retirar dinero.
+     * @param cantidad
+     * @throws Exception 
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
