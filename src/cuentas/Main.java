@@ -15,7 +15,7 @@ public class Main {
         System.out.println("El saldo actual es"+ saldoActual );
 
         try {
-            cuenta1.retirar(23000);
+            cuenta1.retirar(2300);
         } catch (Exception e) {
             System.out.print("Fallo al retirar");
         }
