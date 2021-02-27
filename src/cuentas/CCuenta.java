@@ -3,6 +3,7 @@ package cuentas;
  * Esta clase es la que almacena los datos de la cuenta bancaria
  * en cuestión.
  * @author Fer
+ * @version 
  */
 
 public class CCuenta {
@@ -63,7 +64,12 @@ public class CCuenta {
         this.tipoInterés = tipoInterés;
     }
 
-
+/**
+ *  variable nombre para el nombre del usuario
+ * cuenta para la cuenta corriente,
+ * saldo para el saldo en cuenta y
+ * tipo de interés para el tipo de interés que se aplica.
+ */
     private String nombre;
     private String cuenta;
     private double saldo;
@@ -75,10 +81,10 @@ public class CCuenta {
 
     /**
      * Método constructor
-     * @param nom
-     * @param cue
-     * @param sal
-     * @param tipo 
+     * @param nom  para el nombre del usuario.
+     * @param cue para la cuenta corriente.
+     * @param sal para el saldo en cuenta.
+     * @param tipo para el tipo de interés que se aplica.
      */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
@@ -87,6 +93,10 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     * 
+     * @return el saldo de la cuenta.
+     */
     public double estado()
     {
         return getSaldo();
